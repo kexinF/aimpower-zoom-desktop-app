@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import zoomSdk from "@zoom/appssdk";
 import { apis, invokeZoomAppsSdk } from "./apis";
@@ -71,26 +72,37 @@ export default function Home() {
         }
     });
     return (
-        <div className="flex flex-col items-center justify-center w-full h-screen bg-black p-4">
-            <div className="bg-gray-700 rounded-lg shadow p-6 max-w-xs w-full overflow-auto">
-                <h1 className="text-lg font-semibold text-white mb-4">
+        <div className="bg-black w-screen h-screen">
+            <div className="flex w-full justify-between">
+                <Image
+                    src="/aimpower.png"
+                    alt="Aimpower Logo"
+                    className="h-20 p-5 w-auto rounded-3xl"
+                    width="400"
+                    height="400"
+                />
+                <h3 className="text-xl font-bold text-teal-600 p-5">
                     Welcome{" "}
                     {user
                         ? `${user.first_name} ${user.last_name}`
                         : "Zoom Apps User"}
                     !
-                </h1>
-
-                <div className="space-y-2">
-                    {filteredApis?.map((api) => (
-                        <button
-                            onClick={() => invokeZoomAppsSdk(api)}
-                            className="w-full bg-teal-600 hover:bg-green-900 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline transform transition duration-150 ease-in-out"
-                            key={api.buttonName || api.name}
-                        >
-                            {api.buttonName || api.name}
-                        </button>
-                    ))}
+                </h3>
+            </div>
+            <div className="flex flex-col items-center justify-center w-full  p-4">
+                <div className="max-w-xs w-full overflow-auto">
+                    <div className="space-y-2">
+                        {filteredApis?.map((api) => (
+                            <button
+                                onClick={invokeZoomAppsSdk(api)}
+                                className="w-full bg-slate-800 hover:bg-slate-900 text-white font-medium py-2 rounded-lg focus:outline-none focus:shadow-outline transform transition duration-150 ease-in-out"
+                                key={api.buttonName || api.name}
+                            >
+                                {" "}
+                                {api.buttonName || api.name}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
