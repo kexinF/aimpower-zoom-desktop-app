@@ -8,6 +8,7 @@ export default function Home() {
     const [user, setUser] = useState(null);
     const [runningContext, setRunningContext] = useState(null);
     const [userContextStatus, setUserContextStatus] = useState("");
+    const [apiSearchText, setApiSearchText] = useState("");
 
     useEffect(() => {
         async function configureSdk() {
@@ -56,7 +57,6 @@ export default function Home() {
     if (error) {
         return <div>Error: {error}</div>;
     }
-    const [apiSearchText, setApiSearchText] = useState("");
 
     const searchHandler = (e) => {
         let lowerCase = e.target.value.toLowerCase();
