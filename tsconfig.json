@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/backup_page.js"
-  ],
+, "app/post-installation/page.js", "app/post-installation/page.js"  ],
   "exclude": [
     "node_modules"
   ]

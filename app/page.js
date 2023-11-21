@@ -16,22 +16,22 @@ export default function Home() {
                 const configResponse = await zoomSdk.config({
                     capabilities: [
                         "setVirtualBackground",
-                        "onSendAppInvitation",
-                        "onShareApp",
-                        "onActiveSpeakerChange",
-                        "onMeeting",
-                        "connect",
-                        "onConnect",
-                        "postMessage",
-                        "onMessage",
-                        "authorize",
-                        "onAuthorized",
-                        "promptAuthorize",
-                        "getUserContext",
-                        "onMyUserContextChange",
-                        "sendAppInvitationToAllParticipants",
-                        "sendAppInvitation",
-                        "setVideoFilter",
+                        // "onSendAppInvitation",
+                        // "onShareApp",
+                        // "onActiveSpeakerChange",
+                        // "onMeeting",
+                        // "connect",
+                        // "onConnect",
+                        // "postMessage",
+                        // "onMessage",
+                        // "authorize",
+                        // "onAuthorized",
+                        // "promptAuthorize",
+                        // "getUserContext",
+                        // "onMyUserContextChange",
+                        // "sendAppInvitationToAllParticipants",
+                        // "sendAppInvitation",
+                        // "setVideoFilter",
                     ],
                     version: "0.16.0",
                 });
@@ -71,42 +71,27 @@ export default function Home() {
         }
     });
     return (
-        <div>
-            <h1>
-                Hello
-                {user
-                    ? ` ${user.first_name} ${user.last_name}`
-                    : " Zoom Apps user"}
-                !
-            </h1>
-            <p>{`User Context Status: ${userContextStatus}`}</p>
-            <p>
-                {runningContext
-                    ? `Running Context: ${runningContext}`
-                    : "Configuring Zoom JavaScript SDK..."}
-            </p>
+        <div className="flex flex-col items-center justify-center w-full h-screen bg-black p-4">
+            <div className="bg-gray-700 rounded-lg shadow p-6 max-w-xs w-full overflow-auto">
+                <h1 className="text-lg font-semibold text-white mb-4">
+                    Welcome{" "}
+                    {user
+                        ? `${user.first_name} ${user.last_name}`
+                        : "Zoom Apps User"}
+                    !
+                </h1>
 
-            <div className="api-scrollview">
-                <input
-                    placeholder="Search for an API"
-                    onChange={searchHandler}
-                    label="Search"
-                    id="api-scrollview-input"
-                />
-
-                <div className="api-buttons-list">
+                <div className="space-y-2">
                     {filteredApis?.map((api) => (
                         <button
-                            onClick={invokeZoomAppsSdk(api)}
-                            className="api-button"
+                            onClick={() => invokeZoomAppsSdk(api)}
+                            className="w-full bg-teal-600 hover:bg-green-900 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline transform transition duration-150 ease-in-out"
                             key={api.buttonName || api.name}
                         >
-                            {" "}
                             {api.buttonName || api.name}
                         </button>
                     ))}
                 </div>
-                <hr className="hr-scroll-border"></hr>
             </div>
         </div>
     );

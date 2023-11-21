@@ -42,105 +42,105 @@ const apis = [
     {
         name: "removeVirtualBackground",
     },
-    {
-        name: "getSupportedJsApis",
-    },
-    {
-        name: "openUrl",
-        options: { url: "https://www.google2.com/" },
-    },
-    {
-        name: "getMeetingContext",
-    },
-    {
-        name: "getRunningContext",
-    },
-    {
-        name: "showNotification",
-        options: {
-            type: "info",
-            title: "Hello Zoom Apps",
-            message: "Testing notification",
-        },
-    },
-    {
-        name: "sendAppInvitationToAllParticipants",
-    },
-    {
-        name: "sendAppInvitationToMeetingOwner",
-    },
-    {
-        name: "showAppInvitationDialog",
-    },
-    {
-        name: "getMeetingParticipants",
-    },
-    {
-        name: "getMeetingUUID",
-    },
-    {
-        name: "getMeetingJoinUrl",
-    },
-    {
-        name: "listCameras",
-    },
-    {
-        name: "expandApp",
-    },
-    {
-        name: "allowParticipantToRecord",
-    },
-    {
-        name: "getRecordingContext",
-    },
-    {
-        buttonName: "cloudRecording (start)",
-        name: "cloudRecording",
-        options: { action: "start" },
-    },
-    {
-        buttonName: "cloudRecording (stop)",
-        name: "cloudRecording",
-        options: { action: "stop" },
-    },
-    {
-        buttonName: "cloudRecording (pause)",
-        name: "cloudRecording",
-        options: { action: "pause" },
-    },
-    {
-        buttonName: "cloudRecording (resume)",
-        name: "cloudRecording",
-        options: { action: "resume" },
-    },
-    {
-        buttonName: "setVideoMirrorEffect (true)",
-        name: "setVideoMirrorEffect",
-        options: {
-            mirrorMyVideo: true,
-        },
-    },
-    {
-        buttonName: "setVideoMirrorEffect (false)",
-        name: "setVideoMirrorEffect",
-        options: {
-            mirrorMyVideo: false,
-        },
-    },
-    {
-        buttonName: "shareApp (start)",
-        name: "shareApp",
-        options: {
-            action: "start",
-        },
-    },
-    {
-        buttonName: "shareApp (stop)",
-        name: "shareApp",
-        options: {
-            action: "stop",
-        },
-    },
+    // {
+    //     name: "getSupportedJsApis",
+    // },
+    // {
+    //     name: "openUrl",
+    //     options: { url: "https://www.google2.com/" },
+    // },
+    // {
+    //     name: "getMeetingContext",
+    // },
+    // {
+    //     name: "getRunningContext",
+    // },
+    // {
+    //     name: "showNotification",
+    //     options: {
+    //         type: "info",
+    //         title: "Hello Zoom Apps",
+    //         message: "Testing notification",
+    //     },
+    // },
+    // {
+    //     name: "sendAppInvitationToAllParticipants",
+    // },
+    // {
+    //     name: "sendAppInvitationToMeetingOwner",
+    // },
+    // {
+    //     name: "showAppInvitationDialog",
+    // },
+    // {
+    //     name: "getMeetingParticipants",
+    // },
+    // {
+    //     name: "getMeetingUUID",
+    // },
+    // {
+    //     name: "getMeetingJoinUrl",
+    // },
+    // {
+    //     name: "listCameras",
+    // },
+    // {
+    //     name: "expandApp",
+    // },
+    // {
+    //     name: "allowParticipantToRecord",
+    // },
+    // {
+    //     name: "getRecordingContext",
+    // },
+    // {
+    //     buttonName: "cloudRecording (start)",
+    //     name: "cloudRecording",
+    //     options: { action: "start" },
+    // },
+    // {
+    //     buttonName: "cloudRecording (stop)",
+    //     name: "cloudRecording",
+    //     options: { action: "stop" },
+    // },
+    // {
+    //     buttonName: "cloudRecording (pause)",
+    //     name: "cloudRecording",
+    //     options: { action: "pause" },
+    // },
+    // {
+    //     buttonName: "cloudRecording (resume)",
+    //     name: "cloudRecording",
+    //     options: { action: "resume" },
+    // },
+    // {
+    //     buttonName: "setVideoMirrorEffect (true)",
+    //     name: "setVideoMirrorEffect",
+    //     options: {
+    //         mirrorMyVideo: true,
+    //     },
+    // },
+    // {
+    //     buttonName: "setVideoMirrorEffect (false)",
+    //     name: "setVideoMirrorEffect",
+    //     options: {
+    //         mirrorMyVideo: false,
+    //     },
+    // },
+    // {
+    //     buttonName: "shareApp (start)",
+    //     name: "shareApp",
+    //     options: {
+    //         action: "start",
+    //     },
+    // },
+    // {
+    //     buttonName: "shareApp (stop)",
+    //     name: "shareApp",
+    //     options: {
+    //         action: "stop",
+    //     },
+    // },
 ];
 
 module.exports = { apis, invokeZoomAppsSdk };
