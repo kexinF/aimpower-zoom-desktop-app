@@ -47,8 +47,10 @@ export const redirectUri = zoomApp.redirectUrl;
 export const port = config.PORT || "3000";
 
 // require secrets are explicitly imported
-export default {
+const defaultConfig = {
     appName,
     redirectUri,
     port,
 };
+
+export default defaultConfig;
