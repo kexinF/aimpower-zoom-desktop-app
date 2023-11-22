@@ -75,6 +75,7 @@ export default function Home() {
         }
     });
 
+    //add loding page while runningContext is null or see SSR 
     
     //If user opens the app outside of zoom client, redirect to install page
     if (!runningContext) {
@@ -116,8 +117,9 @@ export default function Home() {
                         height="400"
                     />
                     <h1 className="text-4xl font-extrabold text-teal-600 mt-6 mb-4">
-                        Launch meeting to explore the Aimpower App!
+                        Harshank here Launch meeting to explore the Aimpower App!
                     </h1>
+                  
                     <p className="text-lg text-teal-900 mb-8">
                         Thank you for installing Aimpower Zoom App.
                     </p>
