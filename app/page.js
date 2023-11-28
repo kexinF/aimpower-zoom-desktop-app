@@ -4,7 +4,6 @@ import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import zoomSdk from "@zoom/appssdk";
 import { apis, invokeZoomAppsSdk } from "./apis";
-import { FaClock } from "react-icons/fa";
 
 function LocalVideo({ videoSource, title, time }) {
   const containerStyles = {
@@ -66,7 +65,6 @@ function LocalVideo({ videoSource, title, time }) {
         <div>
           <h2 style={titleStyles}>{title}</h2>
           <div className="flex items-center">
-            <FaClock style={clockIconStyles} />
             <p style={timeStyles}>{time}</p>
           </div>
         </div>
