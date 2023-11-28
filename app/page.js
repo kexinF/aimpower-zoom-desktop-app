@@ -78,6 +78,7 @@ export default function Home() {
     //add loding page while runningContext is null or see SSR 
     
     //If user opens the app outside of zoom client, redirect to install page
+    /*
     if (!runningContext) {
         return (
             <div className="flex flex-col items-center justify-center min-h-screen bg-black">
@@ -134,8 +135,9 @@ export default function Home() {
         );
     }
     //when user is in meeting
+    */
     return (
-        <div className="bg-black w-screen h-screen">
+        <div className="bg-white w-screen h-screen">
             <div className="flex w-full justify-between">
                 <Image
                     src="/aimpower.png"
@@ -145,11 +147,11 @@ export default function Home() {
                     height="400"
                 />
 
-                <h3 className="text-xl font-bold text-teal-600 p-5">
+                <h3 className="text-xl font-bold text-black-600 p-5">
                     Welcome{" "}
                     {user
                         ? `${user.first_name} ${user.last_name}`
-                        : "Zoom Apps User"}
+                        : "Aimpower Apps User"}
                     !
                 </h3>
             
@@ -160,7 +162,7 @@ export default function Home() {
                         {filteredApis?.map((api) => (
                             <button
                                 onClick={invokeZoomAppsSdk(api)}
-                                className="w-full bg-slate-800 hover:bg-slate-900 text-white font-medium py-2 rounded-lg focus:outline-none focus:shadow-outline transform transition duration-150 ease-in-out"
+                                className="w-full bg-[#35377D] hover:bg-slate-900 text-white font-medium py-2 rounded-lg focus:outline-none focus:shadow-outline transform transition duration-150 ease-in-out"
                                 key={api.buttonName || api.name}
                             >
                                 {" "}
@@ -172,4 +174,5 @@ export default function Home() {
             </div>
         </div>
     );
+    
 }

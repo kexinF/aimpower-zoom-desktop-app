@@ -44,6 +44,30 @@ const apis = [
         name: "removeVirtualBackground",
         buttonName: "Remove Background",
     },
+    {
+        name: "setVirtualBackground",
+        buttonName: "I'm still speaking",
+        options: {
+            fileUrl:
+                "https://i.imgur.com/GENo1j7.jpeg",
+        },
+    },
+    {
+        name: "removeVirtualBackground",
+        buttonName: "Done Speaking",
+    },
+    {
+        name: "setVirtualBackground",
+        buttonName: "Set PWS Badge",
+        options: {
+            fileUrl:
+                "https://i.imgur.com/c1Naqsl.jpeg",
+        },
+    },
+    {
+        name: "removeVirtualBackground",
+        buttonName: "Remove PWS Badge",
+    },
     // {
     //     name: "getSupportedJsApis",
     // },
