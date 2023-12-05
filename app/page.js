@@ -18,6 +18,12 @@ export default function Home() {
       const configResponse = await zoomSdk.config({
         capabilities: [
           "setVirtualBackground",
+          "removeVirtualBackground",
+          // "setVideoFilter",
+          // "deleteVideoFilter",
+          "setVirtualForeground",
+          "removeVirtualForeground"
+
         ],
         version: "0.16.0",
       });
